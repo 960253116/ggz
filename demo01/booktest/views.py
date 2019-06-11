@@ -28,10 +28,13 @@ from django.views.generic import View
 #         return res
 
 #用装饰器装饰一下
-def checklogin(func):
+def checklogin(fun):
     def check(req,*args):
-        if req.COOKIES.get('username'):
-            return func(req,*args)
+        # if req.COOKIES.get('username'):
+        #     return func(req,*args)
+
+        if req.session.get("username"):
+            return fun(req,*args)
 
         else:
             return redirect(reverse('booktest:login'))
@@ -78,7 +81,9 @@ def login(req):
     elif req.method =="POST":
         username = req.POST.get("username")
         pwd=req.POST.get("password")
+        req.session["username"]=username
+        return redirect(reverse("booktest:index"))
         #cookie实在response里设置
-        res = redirect(reverse("booktest:index"))
-        res.set_cookie("username", username)
-        return res
+        # res = redirect(reverse("booktest:index"))
+        # res.set_cookie("username", username)
+        # return res
