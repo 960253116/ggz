@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>详情页</title>
+</head>
+<body>
+    <h2>{{ top.id }}</h2>
+
+    <li>
+    <form action="/detail/{{ top.id }}/" method="post">
+        {% for t in top.nameinfo_set.all %}
+
+            <input type="radio" value="{{ t.id }}" name="ppt">{{ t.name }}
+
+        <br>
+        {% endfor %}
+        <input type="submit" value="投票" >
+    </form>
+    </li>
+
+
+
+
+    <a href="/list/" style="text-decoration:none">返回列表页</a>
+
+</body>
+</html>

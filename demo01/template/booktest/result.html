@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>结果页</title>
+</head>
+<body>
+
+    <h1>{{ top.title }}</h1><br>投票结果:
+    {% for a in top.nameinfo_set.all %}<br>
+        {{ a.name }}---->{{ a.vote }}<br>
+    {% endfor %}
+</body>
+</html>
