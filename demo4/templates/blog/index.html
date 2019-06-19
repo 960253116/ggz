@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %}
+
+{% block left %}
+<ul>
+	{% for article in articles %}
+		<li>
+			<h2> <a href="index.html">[TIPS] {{article.title}}</a> <span>(July 05, 2012)</span> </h2>
+			<a href="index.html"><img src="images/character-1-home.png" alt=""></a>
+
+			<p>
+				{{article.body}}
+			</p>
+		</li>
+	{% endfor %}
+</ul>
+
+<!--						<li>-->
+<!--							<h2><a href="index.html">[UPDATE] Tournament Schedules</a> <span>(June 28, 2012)</span></h2>-->
+<!--							<a href="index.html"><img src="images/character-2-home.png" alt=""></a>-->
+<!--							<p>-->
+<!--								This website template has been collect from freewebsitetemplates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the forum.-->
+<!--							</p>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<h2><a href="index.html">[Character Build] Item Build & Skill Build</a> <span>(June 01, 2012)</span></h2>-->
+<!--							<a href="index.html"><img src="images/character-3-home.png" alt=""></a>-->
+<!--							<p>-->
+<!--								This website template has been collect from freewebsitetemplates for you, for free. You can replace all this text with your own text. You can remove any link to our website from this website template, you're free to use this website template without linking back to us. If you're having problems editing this website template, then don't hesitate to ask for help on the forum.-->
+<!--							</p>-->
+<!--						</li>-->
+<!--					</ul>-->
+<!--					<ul class="paging">-->
+
+<!--					</ul>-->
+{% endblock %}
