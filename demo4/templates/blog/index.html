@@ -1,18 +1,58 @@
 {% extends "blog/base.html" %}
-
 {% block left %}
 <ul>
 	{% for article in articles %}
 		<li>
-			<h2> <a href="index.html">[TIPS] {{article.title}}</a> <span>(July 05, 2012)</span> </h2>
-			<a href="index.html"><img src="images/character-1-home.png" alt=""></a>
+			<h2> <a href="#">[TIPS] {{article.title}}</a> <span>(July 05, 2012)</span> </h2>
+			<a href="#"><img src="/static/media/{{ article.pic }}" alt=""></a>
 
 			<p>
 				{{article.body}}
 			</p>
+
 		</li>
+
 	{% endfor %}
+		<ul class="paging">
+						<ul>
+								<li>
+									<a href="index.html">1</a>
+								</li>
+								<li>
+									<a href="index.html">2</a>
+								</li>
+								<li>
+									<a href="index.html">3</a>
+								</li>
+								<li>
+									<a href="index.html">4</a>
+								</li>
+								<li>
+									<a href="index.html">5</a>
+								</li>
+								<li>
+									<a href="index.html">6</a>
+								</li>
+								<li>
+									<a href="index.html">7</a>
+								</li>
+								<li>
+									<a href="index.html">8</a>
+								</li>
+								<li>
+									<a href="index.html">9</a>
+								</li>
+								<li>
+									<a href="index.html">10</a>
+								</li>
+
+							</ul>
+
+					</ul>
 </ul>
+
+
+
 
 <!--						<li>-->
 <!--							<h2><a href="index.html">[UPDATE] Tournament Schedules</a> <span>(June 28, 2012)</span></h2>-->
@@ -30,6 +70,96 @@
 <!--						</li>-->
 <!--					</ul>-->
 <!--					<ul class="paging">-->
+<!--						<ul>-->
+<!--								<li>-->
+<!--									<a href="index.html" class="active">1</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">2</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">3</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">4</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">5</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">6</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">7</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">8</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">9</a>-->
+<!--								</li>-->
+<!--								<li>-->
+<!--									<a href="index.html">10</a>-->
+<!--								</li>-->
+<!--							</ul>-->
+
 
 <!--					</ul>-->
+{% endblock %}
+
+
+{% block q %}
+<div id="sidebar">
+
+
+					<h1><span>技能列表</span></h1>
+	{% for skill in skills %}
+					<ul class="items">
+						<li>
+
+							<a href="#"><img src="/static/media/{{ skill.pic }}" alt=""></a>
+							<h2><a href="#">{{skill.name}}</a></h2>
+
+						</li>
+<!--						<li>-->
+
+<!--							<a href="index.html"><img src="/static/images/cloack-of-wizardry.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Cloack of Wizardry</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/gloves-of-artimis.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Gloves of Artimis</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/dragons-tear.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Dragon’s Tear</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/power-booster.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Power Booster</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/snake-armor.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Snake Armor</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/snake-dagger.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Snake Dagger</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/wings-of-speed.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Wings of speed</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/winged-boots.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Winged Boots</a></h2>-->
+<!--						</li>-->
+<!--						<li>-->
+<!--							<a href="index.html"><img src="/static/images/dragon-mirror.png" alt=""></a>-->
+<!--							<h2><a href="index.html">Dragon Mirror</a></h2>-->
+<!--						</li>-->
+					</ul>
+	{% endfor %}
+					<a href="#"  class="more">&nbsp;</a> </div>
+
 {% endblock %}

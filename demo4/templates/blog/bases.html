@@ -8,16 +8,16 @@
 <body>
 	<div id="page">
 		<div id="header">
-			<a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+<!--			<a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>-->
 			<ul class="navigation">
 				<li>
-					<a class="active" href="/">Home</a>
+					<a  href="/">Home</a>
 				</li>
 				<li>
 					<a href="{% url 'blog:character' %}">Character List</a>
 				</li>
 				<li>
-					<a href="about">About</a>
+					<a href="{% url 'blog:about' %}">About</a>
 				</li>
 				<li>
 					<a href="blog">Blog</a>
@@ -28,10 +28,10 @@
 			</ul>
 		</div>
 		<div id="body">
-			<div class="featured"> <img src="/static/images/111.png" alt=""> <a href="#" class="">勇士战斗吧</a> </div>
+<!--			<div class="featured"> <img src="/static/images/featured-game-character-home.jpg" alt=""> <a href="character.html" class="">Check Items in Character List</a> </div>-->
 			<div id="content">
 				<div class="content">
-					<ul class="articles">
+<!--					<ul class="articles">-->
 					{% block left %}
 
 					{% endblock %}

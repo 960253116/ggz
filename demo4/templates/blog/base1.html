@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Omorfium Template</title>
+	<meta  charset="utf-8">
+	<link href="/static/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div id="page">
+		<div id="header">
+			<a href="index.html"><img class="logo" src="images/logo.png" alt=""></a>
+			<ul class="navigation">
+				<li>
+					<a href="/">Home</a>
+				</li>
+				<li>
+					<a href="{% url 'blog:character' %}">Character List</a>
+				</li>
+				<li>
+					<a href="{% url 'blog:about' %}">About</a>
+				</li>
+				<li>
+					<a href="{% url 'blog:blog' %}">Blog</a>
+				</li>
+<!--				<li>-->
+<!--					<a href="forum">Forum</a>-->
+<!--				</li>-->
+			</ul>
+		</div>
+		<div id="body">
+<!--			<div class="featured"> <img src="/static/images/featured-game-character-home.jpg" alt=""> <a href="character.html" class="">Check Items in Character List</a> </div>-->
+			<div id="content">
+				<div class="content">
+					<ul class="articles">
+					{% block left %}
+
+					{% endblock %}
+					</ul>
+
+				</div>
+				{% block q%}
+
+
+				{% endblock %}
+			</div>
+		</div>
+		<div id="footer"> <span>&copy; 2012 <a href="index.html">Omorfium</a>. All rights reserved.&nbsp;<a href="http://www.cssmoban.com" title="网站模板" target="_blank">网站模板</a></span> </div>
+	</div>
+</body>
+</html>
